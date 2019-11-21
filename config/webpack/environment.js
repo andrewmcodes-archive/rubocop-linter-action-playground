@@ -1,10 +1,8 @@
 const { environment } = require('@rails/webpacker')
+const webpack = require('webpack')
 
-    const webpack = require('webpack')
-    environment.plugins.append('Provide', new webpack.ProvidePlugin({
-      $: 'jquery',	
-      jQuery: 'jquery',	
-      Rails: '@rails/ujs'	
-    }))
+environment.plugins.append('Provide', new webpack.ProvidePlugin({
+  Rails: '@rails/ujs'
+}))
 
 module.exports = environment
