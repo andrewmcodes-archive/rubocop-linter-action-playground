@@ -20,7 +20,8 @@ jobs:
           git config --local user.email "andrewmcodes@protonmail.com"
           git config --local user.name "Andrew Mason"
           git switch -c ${{ github.event.client_payload.sha }}
-          git commit -m "test ${{ github.event.client_payload.sha }}" -a
+          git add .
+          git commit -m "test ${{ github.event.client_payload.sha }}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
