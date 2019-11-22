@@ -24,7 +24,7 @@ jobs:
       - name: 'Inputs: File Paths'
         uses: andrewmcodes/rubocop-linter-action@changemepls
         with:
-          file_paths: 'app/controllers/**/*.rb'
+          file_paths: "app/controllers/**/*.rb"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
