@@ -10,33 +10,33 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: 'Inputs: None'
-        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        uses: andrewmcodes/rubocop-linter-action@1bbfb234963ad6a6c386aec47f65474c299e8e78
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Version'
-        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        uses: andrewmcodes/rubocop-linter-action@1bbfb234963ad6a6c386aec47f65474c299e8e78
         with:
           version: '0.55'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: File Paths'
-        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        uses: andrewmcodes/rubocop-linter-action@1bbfb234963ad6a6c386aec47f65474c299e8e78
         with:
           file_paths: 'app/controllers/**/*.rb'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Exclude Cops'
-        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        uses: andrewmcodes/rubocop-linter-action@1bbfb234963ad6a6c386aec47f65474c299e8e78
         with:
           exclude_cops: 'Style/FrozenStringLiteralComment Style/StringLiterals'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Fail Level'
-        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        uses: andrewmcodes/rubocop-linter-action@1bbfb234963ad6a6c386aec47f65474c299e8e78
         with:
           fail_level: 'refactor'
         env:
@@ -51,7 +51,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Additional Gems with Versions'
-        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        uses: andrewmcodes/rubocop-linter-action@1bbfb234963ad6a6c386aec47f65474c299e8e78
         with:
           config_path: '.rubocop_plugins.yml'
           additional_gems: 'rubocop-thread_safety -v 0.3.4 rubocop-i18n -v 2.0.0'
