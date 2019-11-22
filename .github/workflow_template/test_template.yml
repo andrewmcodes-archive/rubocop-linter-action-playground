@@ -54,22 +54,6 @@ jobs:
         uses: andrewmcodes/rubocop-linter-action@changemepls
         with:
           config_path: '.rubocop_plugins.yml'
-          additional_gems: 'rubocop-thread_safety -v 0.3.4 rubocop-i18n -v 2.0.0'
+          additional_gems: "'rubocop-thread_safety:0.3.4' 'rubocop-i18n:~>2.0'"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-# action "Filter master" {
-#   uses = "actions/bin/filter@46ffca7632504e61db2d4cb16be1e80f333cb859"
-#   args = "not branch master"
-# }
-
-# action "Some action that changes files" {
-#   uses = "..."
-#   args = "..."
-# }
-
-# action "Auto-commit" {
-#   uses = "docker://cdssnc/auto-commit-github-action"
-#   needs = ["Some action that changes files"]
-#   args = "This is an auto-commit"
-#   secrets = ["GITHUB_TOKEN"]
-# }
