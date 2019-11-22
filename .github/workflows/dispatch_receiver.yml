@@ -1,0 +1,27 @@
+name: Repository Dispatch
+on:
+  repository_dispatch:
+    types: [rubocop-linter-action-test]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          ref: ${{ github.event.client_payload.ref }}
+      - name: delete old file if needed
+        run: |
+          find . -name ".github/workflow_template/test.yml" -delete
+      - name: create new file
+        run: |
+          sed 's/changemepls/${{ github.event.client_payload.sha }}/g' .github/workflow_template/test_template.yml > .github/workflow_template/test.yml
+      - name: Commit files
+        run: |
+          git config --local user.email "andrewmcodes@protonmail.com"
+          git config --local user.name "Andrew Mason"
+          git switch -c ${{ github.event.client_payload.sha }}
+          git commit -m "test ${{ github.event.client_payload.sha }}" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
