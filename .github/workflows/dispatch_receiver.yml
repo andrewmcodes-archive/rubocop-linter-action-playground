@@ -12,7 +12,7 @@ jobs:
           find . -name ".github/workflow_template/test.yml" -delete
       - name: create new file
         run: |
-          sed 's/changemepls/${{ github.event.client_payload.sha }}/g' .github/workflow_template/test_template.yml > .github/workflow_template/test.yml
+          sed 's/changemepls/${{ github.event.client_payload.sha }}/g' .github/workflow_template/test_template.yml > .github/workflow/test.yml
       - name: Commit files
         run: |
           git config --local user.email "andrewmcodes@protonmail.com"
