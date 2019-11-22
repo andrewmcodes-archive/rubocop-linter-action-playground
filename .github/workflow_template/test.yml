@@ -1,0 +1,75 @@
+name: Test
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: 'Inputs: None'
+        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Inputs: Version'
+        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        with:
+          version: '0.55'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Inputs: File Paths'
+        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        with:
+          file_paths: 'app/controllers/**/*.rb'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Inputs: Exclude Cops'
+        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        with:
+          exclude_cops: 'Style/FrozenStringLiteralComment Style/StringLiterals'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Inputs: Fail Level'
+        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        with:
+          fail_level: 'refactor'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Inputs: Additional Gems'
+        uses: andrewmcodes/rubocop-linter-action@${{ github.eventbundl.client_payload.sha }}
+        with:
+          config_path: '.rubocop_plugins.yml'
+          additional_gems: 'rubocop-thread_safety rubocop-i18n'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Inputs: Additional Gems with Versions'
+        uses: andrewmcodes/rubocop-linter-action@7bb169e4ea43f300f49955f00dc016547ffb11bb
+        with:
+          config_path: '.rubocop_plugins.yml'
+          additional_gems: 'rubocop-thread_safety -v 0.3.4 rubocop-i18n -v 2.0.0'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# action "Filter master" {
+#   uses = "actions/bin/filter@46ffca7632504e61db2d4cb16be1e80f333cb859"
+#   args = "not branch master"
+# }
+
+# action "Some action that changes files" {
+#   uses = "..."
+#   args = "..."
+# }
+
+# action "Auto-commit" {
+#   uses = "docker://cdssnc/auto-commit-github-action"
+#   needs = ["Some action that changes files"]
+#   args = "This is an auto-commit"
+#   secrets = ["GITHUB_TOKEN"]
+# }
