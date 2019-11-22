@@ -1,6 +1,19 @@
+require:
+  - rubocop-i18n
+  - rubocop-thread_safety
+  - rubocop-performance
+  - rubocop-rails
+
+RailsI18n:
+  Enabled: true
+
+Rails:
+  Enabled: true
+
 AllCops:
   # Prevent RuboCop from exploding when it finds an older-than-2.3 .ruby-version
   TargetRubyVersion: 2.6
+  DisabledByDefault: true
   Exclude: []
 
 Bundler/InsecureProtocolSource:
@@ -547,6 +560,72 @@ Naming/VariableName:
   Enabled: true
   EnforcedStyle: snake_case
 
+Performance/Caller:
+  Enabled: true
+
+Performance/CompareWithBlock:
+  Enabled: true
+
+Performance/Count:
+  Enabled: true
+
+Performance/Detect:
+  Enabled: true
+
+Performance/DoubleStartEndWith:
+  Enabled: true
+  IncludeActiveSupportAliases: false
+
+Performance/EndWith:
+  Enabled: true
+  SafeAutoCorrect: false
+  AutoCorrect: false
+
+Performance/FixedSize:
+  Enabled: true
+
+Performance/FlatMap:
+  Enabled: true
+  EnabledForFlattenWithoutParams: false
+
+Performance/InefficientHashSearch:
+  Enabled: true
+  Safe: false
+
+Performance/RangeInclude:
+  Enabled: true
+  Safe: false
+
+Performance/RedundantMatch:
+  Enabled: true
+
+Performance/RedundantMerge:
+  Enabled: true
+  MaxKeyValuePairs: 2
+
+Performance/RegexpMatch:
+  Enabled: true
+
+Performance/ReverseEach:
+  Enabled: true
+
+Performance/Size:
+  Enabled: true
+
+Performance/StartWith:
+  Enabled: true
+  SafeAutoCorrect: false
+  AutoCorrect: false
+
+Performance/StringReplacement:
+  Enabled: true
+
+Performance/UnfreezeString:
+  Enabled: true
+
+Performance/UriDefaultParser:
+  Enabled: true
+
 Security/Eval:
   Enabled: true
 
@@ -562,6 +641,39 @@ Security/Open:
 Security/YAMLLoad:
   Enabled: true
   SafeAutoCorrect: false
+
+
+Standard/SemanticBlocks:
+  ProceduralMethods:
+    - benchmark
+    - bm
+    - bmbm
+    - tap
+    # Enumerable
+    - cycle
+    - each
+    - each_cons
+    - each_entry
+    - each_slice
+    - each_with_index
+    # Rails
+    - transaction
+  FunctionalMethods:
+    - let
+    - let!
+    - subject
+    - watch
+    - Given
+    - Given!
+    - Invariant
+    - Then
+    - And
+  IgnoredMethods:
+    - lambda
+    - proc
+    - describe
+    - it
+    - When
 
 Style/Alias:
   Enabled: true

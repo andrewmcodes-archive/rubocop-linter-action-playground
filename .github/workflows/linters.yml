@@ -1,0 +1,60 @@
+name: Repository Dispatch
+on:
+  repository_dispatch:
+    types: [rubocop-linter-action-test]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          ref: ${{ github.event.client_payload.ref }}
+
+      - uses: andrewmcodes/rubocop-linter-action@${{ github.event.client_payload.sha }}
+        name: 'Inputs: None'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: andrewmcodes/rubocop-linter-action@${{ github.event.client_payload.sha }}
+        name: 'Inputs: Version'
+        with:
+          version: '0.55'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: andrewmcodes/rubocop-linter-action@${{ github.event.client_payload.sha }}
+        name: 'Inputs: File Paths'
+        with:
+          file_paths: 'app/controllers/**/*.rb'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: andrewmcodes/rubocop-linter-action@${{ github.event.client_payload.sha }}
+        name: 'Inputs: Exclude Cops'
+        with:
+          exclude_cops: 'Style/FrozenStringLiteralComment Style/StringLiterals'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: andrewmcodes/rubocop-linter-action@${{ github.event.client_payload.sha }}
+        name: 'Inputs: Fail Level'
+        with:
+          fail_level: 'refactor'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: andrewmcodes/rubocop-linter-action@${{ github.eventbundl.client_payload.sha }}
+        name: 'Inputs: Additional Gems'
+        with:
+          config_path: '.rubocop_plugins.yml'
+          additional_gems: 'rubocop-thread_safety rubocop-i18n'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: andrewmcodes/rubocop-linter-action@${{ github.event.client_payload.sha }}
+        name: 'Inputs: Additional Gems with Versions'
+        with:
+          config_path: '.rubocop_plugins.yml'
+          additional_gems: 'rubocop-thread_safety -v 0.3.4 rubocop-i18n -v 2.0.0'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
