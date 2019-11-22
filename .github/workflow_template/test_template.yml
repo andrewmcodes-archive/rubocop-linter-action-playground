@@ -21,13 +21,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Inputs: File Paths'
-        uses: andrewmcodes/rubocop-linter-action@changemepls
-        with:
-          file_paths: "app/controllers/**/*.rb"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: 'Inputs: Exclude Cops'
         uses: andrewmcodes/rubocop-linter-action@changemepls
         with:
