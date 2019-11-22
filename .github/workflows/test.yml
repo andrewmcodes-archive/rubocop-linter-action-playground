@@ -43,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Additional Gems'
-        uses: andrewmcodes/rubocop-linter-action@acb7297e29bcbef03369170213c82a8c1f630as49
+        uses: andrewmcodes/rubocop-linter-action@05d91ae6e7a23265a289ab203108c421464504d4
         with:
           config_path: '.rubocop_plugins.yml'
           additional_gems: 'rubocop-thread_safety rubocop-i18n'
