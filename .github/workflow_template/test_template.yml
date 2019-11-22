@@ -39,7 +39,7 @@ jobs:
         uses: andrewmcodes/rubocop-linter-action@changemepls
         with:
           config_path: '.rubocop_plugins.yml'
-          additional_gems: 'rubocop-thread_safety rubocop-i18n'
+          additional_gems: 'rubocop-rails rubocop-performance rubocop-thread_safety rubocop-i18n'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -47,6 +47,6 @@ jobs:
         uses: andrewmcodes/rubocop-linter-action@changemepls
         with:
           config_path: '.rubocop_plugins.yml'
-          additional_gems: "'rubocop-thread_safety:0.3.4' 'rubocop-i18n:~>2.0'"
+          additional_gems: "rubocop-rails rubocop-performance 'rubocop-thread_safety:0.3.4' 'rubocop-i18n:~>2.0'"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
