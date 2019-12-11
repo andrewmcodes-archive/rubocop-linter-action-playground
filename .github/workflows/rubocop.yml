@@ -10,7 +10,6 @@ jobs:
     - name: Rubocop Linter
       uses: andrewmcodes/rubocop-linter-action@fcff3dd60d75d0755c8d9d120c17f9269daf2e8d
       with:
-        additional_gems: 'rubocop-rails rubocop-performance'
-        fail_level: 'warning'
+        action_config: '.github/config/rubocop_linter.yml'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
