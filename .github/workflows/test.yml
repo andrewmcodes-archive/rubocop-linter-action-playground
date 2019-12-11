@@ -10,33 +10,33 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: 'Inputs: None'
-        uses: andrewmcodes/rubocop-linter-action@87c67a98201a5c7c5a11c5ee7e2d03d244398dc0
+        uses: andrewmcodes/rubocop-linter-action@9b5bf6ec67c854194590afa1cec980aa5246b062
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Version'
-        uses: andrewmcodes/rubocop-linter-action@87c67a98201a5c7c5a11c5ee7e2d03d244398dc0
+        uses: andrewmcodes/rubocop-linter-action@9b5bf6ec67c854194590afa1cec980aa5246b062
         with:
           version: '0.55'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Exclude Cops'
-        uses: andrewmcodes/rubocop-linter-action@87c67a98201a5c7c5a11c5ee7e2d03d244398dc0
+        uses: andrewmcodes/rubocop-linter-action@9b5bf6ec67c854194590afa1cec980aa5246b062
         with:
           exclude_cops: 'Style/FrozenStringLiteralComment Style/StringLiterals'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Fail Level'
-        uses: andrewmcodes/rubocop-linter-action@87c67a98201a5c7c5a11c5ee7e2d03d244398dc0
+        uses: andrewmcodes/rubocop-linter-action@9b5bf6ec67c854194590afa1cec980aa5246b062
         with:
           fail_level: 'refactor'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Additional Gems'
-        uses: andrewmcodes/rubocop-linter-action@87c67a98201a5c7c5a11c5ee7e2d03d244398dc0
+        uses: andrewmcodes/rubocop-linter-action@9b5bf6ec67c854194590afa1cec980aa5246b062
         with:
           config_path: '.rubocop_plugins.yml'
           additional_gems: 'rubocop-rails rubocop-performance rubocop-thread_safety rubocop-i18n'
@@ -44,7 +44,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Additional Gems with Versions'
-        uses: andrewmcodes/rubocop-linter-action@87c67a98201a5c7c5a11c5ee7e2d03d244398dc0
+        uses: andrewmcodes/rubocop-linter-action@9b5bf6ec67c854194590afa1cec980aa5246b062
         with:
           config_path: '.rubocop_plugins.yml'
           additional_gems: "rubocop-rails rubocop-performance 'rubocop-thread_safety:0.3.4' 'rubocop-i18n:~>2.0'"
