@@ -16,4 +16,4 @@ fail_level: 'warning'
 # Bundle your gemfile, to use a specific version or a repo of a gem
 bundle: false
 # Specify whether to lint the whole repo or just changed files
-lint_changed_only: false
+lint_changed_only: true
