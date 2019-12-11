@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Rubocop Linter
-      uses: andrewmcodes/rubocop-linter-action@ff9f243740991946e289f3c1e26498835946df1f
+      uses: andrewmcodes/rubocop-linter-action@fcff3dd60d75d0755c8d9d120c17f9269daf2e8d
       with:
         additional_gems: 'rubocop-rails rubocop-performance'
         fail_level: 'warning'
