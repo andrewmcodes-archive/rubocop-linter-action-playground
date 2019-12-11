@@ -17,3 +17,4 @@ fail_level: 'warning'
 bundle: false
 # Specify whether to lint the whole repo or just changed files
 lint_changed_only: false
+check_name: "Rubocop Results"
