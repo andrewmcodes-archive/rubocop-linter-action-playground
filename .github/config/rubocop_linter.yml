@@ -1,0 +1,20 @@
+# Define a specific version of Rubocop otherwise uses latest
+version: 'latest'
+# Define additional gems to install to use with rubocop
+additional_gems:
+  - 'rubocop-rails'
+  - 'rubocop-performance': '1.5.1'
+  - 'rubocop-minitest': 'latest'
+  - 'rubocop-rspec': '1.37.0'
+# Define a path to a config file relative to the workspace
+config_path: '.rubocop.yml'
+# List out Cops or departments to exclude from run
+excluded_cops:
+  - 'Style/FrozenStringLiteralComment'
+# Define Fail level, available values are refactor, convention, warning, error and fatal
+fail_level: 'warning'
+# Bundle your gemfile, to use a specific version or a repo of a gem
+bundle: false
+# Specify whether to lint the whole repo or just changed files
+lint_changed_only: false
+check_name: "Rubocop Results"

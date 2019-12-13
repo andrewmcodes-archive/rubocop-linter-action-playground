@@ -8,9 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Rubocop Linter
-      uses: andrewmcodes/rubocop-linter-action@ff9f243740991946e289f3c1e26498835946df1f
+      uses: andrewmcodes/rubocop-linter-action@60c9e83677470c34f9ec16edf24b1125a29b41c1
       with:
-        additional_gems: 'rubocop-rails rubocop-performance'
-        fail_level: 'warning'
+        action_config: '.github/config/rubocop_linter.yml'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

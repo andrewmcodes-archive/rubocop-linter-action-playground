@@ -911,31 +911,6 @@ Style/TrailingCommaInHashLiteral:
 Style/TrailingMethodEndStatement:
   Enabled: true
 
-Style/TrivialAccessors:
-  Enabled: true
-  ExactNameMatch: true
-  AllowPredicates: true
-  AllowDSLWriters: false
-  IgnoreClassMethods: false
-  AllowedMethods:
-    - to_ary
-    - to_a
-    - to_c
-    - to_enum
-    - to_h
-    - to_hash
-    - to_i
-    - to_int
-    - to_io
-    - to_open
-    - to_path
-    - to_proc
-    - to_r
-    - to_regexp
-    - to_str
-    - to_s
-    - to_sym
-
 Style/UnlessElse:
   Enabled: true
 
