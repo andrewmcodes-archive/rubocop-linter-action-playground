@@ -27,7 +27,7 @@ excluded_cops:
 # Minimum severity for exit with error code
 # Valid options: 'refactor', 'convention', 'warning', 'error', or 'fatal'.
 # Default: 'warning'
-fail_level: 'warning'
+fail_level: 'error'
 # Instead of installing gems from rubygems, we can run 'bundle install' on your project,
 # you would need to do this if you are using something like 'rubocop-github' or if you don't
 # want to list out extensions
