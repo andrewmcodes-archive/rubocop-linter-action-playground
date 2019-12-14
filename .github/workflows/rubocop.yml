@@ -13,4 +13,3 @@ jobs:
         action_config: '.github/config/rubocop_linter.yml'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        COMMIT_TOKEN: ${{ secrets.GITHUB_ACTIONS_TOKEN }}
