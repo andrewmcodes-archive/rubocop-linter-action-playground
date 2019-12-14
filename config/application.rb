@@ -8,7 +8,6 @@ Bundler.require(*Rails.groups)
 
 module RubocopLinterActionPlayground
   class Application < Rails::Application
-
     # Expose our application's helpers to Administrate
     config.to_prepare do
       Administrate::ApplicationController.helper RubocopLinterActionPlayground::Application.helpers
