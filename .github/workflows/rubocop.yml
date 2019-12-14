@@ -17,4 +17,5 @@ jobs:
       uses: andrewmcodes/rubocop-linter-action@config-updates
       with:
         action_config: '.github/config/rubocop_linter.yml'
-        github_token: ${{ secrets.DISPATCH_ACCESS_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.DISPATCH_ACCESS_TOKEN }}
