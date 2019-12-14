@@ -39,5 +39,5 @@ bundle: false
 # Valid options: 'modified'
 # Default: none, aka Rubocop is run against the entire codebase
 check_scope: 'all'
-auto_correct: 'safe'
-auto_correct_commit_message: 'send it'
+# auto_correct: 'safe'
+# auto_correct_commit_message: 'send it'
