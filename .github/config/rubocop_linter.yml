@@ -40,4 +40,4 @@ bundle: false
 # Default: none, aka Rubocop is run against the entire codebase
 check_scope: 'all'
 auto_correct: 'unsafe'
-auto_correct_commit_message: 'send it'
+auto_correct_commit_message: 'send ittttt'
