@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Rubocop Linter
+    - uses: actions/checkout@v2
+    - name: Rubocop Linters
       uses: andrewmcodes/rubocop-linter-action@config-updates
       with:
         action_config: '.github/config/rubocop_linter.yml'
