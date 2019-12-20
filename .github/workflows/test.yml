@@ -17,6 +17,6 @@ jobs:
       - name: 'Inputs: Version'
         uses: andrewmcodes/rubocop-linter-action@51283a60351f92f2fe85a3c69387e1e9a29e2072
         with:
-          action_config: '.github/config/rubocop_linter.yml'
+          action_config: '.github/config/rubocop_linter_config.yml'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
