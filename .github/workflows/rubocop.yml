@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Rubocop Linter
-      uses: andrewmcodes/rubocop-linter-action@0216daa3b541f4603d8c12cb851a6227975b07c3
+      uses: andrewmcodes/rubocop-linter-action@7d4b36931ef358f2b96ea4ac308d5867119b3b46
       with:
         action_config: '.github/config/rubocop_linter.yml'
       env:
