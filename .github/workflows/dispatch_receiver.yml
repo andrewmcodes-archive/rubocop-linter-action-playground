@@ -6,7 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: delete old files if needed
         run: |
           find . -name ".github/workflow_template/test.yml" -delete
