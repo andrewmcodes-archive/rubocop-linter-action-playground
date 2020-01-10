@@ -7,7 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: 'Inputs: None'
         uses: andrewmcodes/rubocop-linter-action@changemepls
@@ -17,6 +17,6 @@ jobs:
       - name: 'Inputs: Version'
         uses: andrewmcodes/rubocop-linter-action@changemepls
         with:
-          action_config: '.github/config/rubocop_linter.yml'
+          action_config: '.github/config/rubocop_linter_config.yml'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
