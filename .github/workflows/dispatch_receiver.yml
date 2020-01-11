@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: delete old files if needed
+      - name: delete old files if needed?
         run: |
           find . -name ".github/workflow_template/test.yml" -delete
           find . -name ".github/workflow_template/rubocop.yml" -delete
