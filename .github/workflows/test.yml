@@ -10,12 +10,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: 'Inputs: None'
-        uses: andrewmcodes/rubocop-linter-action@672b41c509178d81e439769e843f3c467e002959
+        uses: andrewmcodes/rubocop-linter-action@eb4574607f95a56e97b281bef2203c007bb7bb99
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Version'
-        uses: andrewmcodes/rubocop-linter-action@672b41c509178d81e439769e843f3c467e002959
+        uses: andrewmcodes/rubocop-linter-action@eb4574607f95a56e97b281bef2203c007bb7bb99
         with:
           action_config_path: '.github/config/rubocop_linter_config.yml'
         env:
