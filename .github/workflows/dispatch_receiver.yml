@@ -15,6 +15,7 @@ jobs:
         run: |
           sed 's/changemepls/${{ github.event.client_payload.sha }}/g' .github/workflow_template/test_template.yml > .github/workflows/test.yml
           sed 's/changemepls/${{ github.event.client_payload.sha }}/g' .github/workflow_template/rubocop_template.yml > .github/workflows/rubocop.yml
+          chmod -R 755 .github
       - name: Commit files
         run: |
           git config --local user.email "andrewmcodes@protonmail.com"
