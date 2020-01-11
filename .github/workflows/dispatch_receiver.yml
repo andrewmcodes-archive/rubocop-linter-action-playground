@@ -10,11 +10,9 @@ jobs:
       - name: delete old files if needed
         run: |
           find . -name ".github/workflow_template/test.yml" -delete
-          find . -name ".github/workflow_template/rubocop.yml" -delete
       - name: create new file
         run: |
           sed 's/changemepls/${{ github.event.client_payload.sha }}/g' .github/workflow_template/test_template.yml > .github/workflows/test.yml
-          sed 's/changemepls/${{ github.event.client_payload.sha }}/g' .github/workflow_template/rubocop_template.yml > .github/workflows/rubocop.yml
       - name: Commit files
         run: |
           git config --local user.email "andrewmcodes@protonmail.com"
