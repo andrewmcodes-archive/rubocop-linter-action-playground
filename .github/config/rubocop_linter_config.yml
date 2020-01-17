@@ -38,4 +38,4 @@ bundle: false
 # to lint changed files
 # Valid options: 'modified'
 # Default: none, aka Rubocop is run against the entire codebase
-check_scope: 'all'
+check_scope: 'modified'
