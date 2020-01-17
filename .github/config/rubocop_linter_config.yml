@@ -32,7 +32,7 @@ rubocop_fail_level: 'convention'
 # to lint changed files
 # Valid options: 'modified'
 # Default: none, aka Rubocop is run against the entire codebase
-check_scope: 'modified'
+rubocop_check_scope: 'modified'
 # Instead of installing gems from rubygems, we can run 'bundle install' on your project,
 # you would need to do this if you are using something like 'rubocop-github' or if you don't
 # want to list out extensions
