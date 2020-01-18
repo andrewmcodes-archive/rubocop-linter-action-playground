@@ -1,22 +1,23 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.7.0'
 
 gem 'administrate', git: 'https://github.com/thoughtbot/administrate.git'
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '>= 1.4.5', require: false
 gem 'devise', '~> 4.7', '>= 4.7.1'
-gem 'friendly_id', '~> 5.2', '>= 5.2.5'
+gem 'friendly_id', '~> 5.3'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
-gem 'jbuilder', '~> 2.7'
-gem 'name_of_person', '~> 1.1'
+gem 'jbuilder', '~> 2.9.1'
+gem 'name_of_person', '~> 1.1.1'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 4.1'
-gem 'rails', '~> 6.0.1'
+gem 'puma', '~> 4.3.1'
+gem 'rails', '~> 6.0.2.1'
 gem 'rubocop'
 gem 'sass-rails', '>= 6'
-gem 'turbolinks', '~> 5'
-gem 'webpacker', '~> 4.0'
+gem 'turbolinks', '~> 5.2.1'
+gem 'webpacker', '~> 4.2.2'
+gem 'mry'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -24,9 +25,7 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'spring'
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '~> 4.0.1'
 end
 
 group :test do
