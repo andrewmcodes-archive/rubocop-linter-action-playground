@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
     - name: Rubocop Linter
       uses: andrewmcodes/rubocop-linter-action@a5dd21fa281a9804e7c1f1cf3e522bc05d982e8a
       with:
