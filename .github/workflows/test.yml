@@ -1,13 +1,10 @@
 name: Test
-on:
-  push:
-    branches:
-      - '*'
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: 'Inputs: None'
         uses: andrewmcodes/rubocop-linter-action@7823f653dc5aae178ff38d310d84e0e632adc8d8
