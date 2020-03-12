@@ -11,5 +11,5 @@ jobs:
 
       - name: 'tickgit-5'
         uses: andrewmcodes/tickgit-action@build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version: latest
