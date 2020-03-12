@@ -45,4 +45,4 @@ bundle: false
 # this to true, rubocop will ignore it.
 # Valid options: true || false
 # Default: false
-force_exclusion: true
+# force_exclusion: true
