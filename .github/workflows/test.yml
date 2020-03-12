@@ -6,17 +6,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: 'Inputs: None'
-        uses: andrewmcodes/rubocop-linter-action@7823f653dc5aae178ff38d310d84e0e632adc8d8
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: 'Inputs: None'
+      #   uses: andrewmcodes/rubocop-linter-action@7823f653dc5aae178ff38d310d84e0e632adc8d8
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Inputs: Version'
-        uses: andrewmcodes/rubocop-linter-action@7823f653dc5aae178ff38d310d84e0e632adc8d8
-        with:
-          action_config_path: '.github/config/rubocop_linter_config.yml'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: 'Inputs: Version'
+      #   uses: andrewmcodes/rubocop-linter-action@7823f653dc5aae178ff38d310d84e0e632adc8d8
+      #   with:
+      #     action_config_path: '.github/config/rubocop_linter_config.yml'
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Bundler Audit'
         uses: andrewmcodes/bundler-audit-action@master
