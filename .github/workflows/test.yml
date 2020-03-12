@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: 'tickgit-3'
+      - name: 'tickgit-4'
         uses: andrewmcodes/tickgit-action@build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
