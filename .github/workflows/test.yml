@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: 'tickgit-17'
+      - name: 'tickgit-18'
         uses: andrewmcodes/tickgit-action@build
         with:
           version: latest
