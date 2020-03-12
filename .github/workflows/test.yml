@@ -9,7 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: 'tickgit-15'
+      - name: 'tickgit-16'
         uses: andrewmcodes/tickgit-action@build
         with:
           version: latest
+          csv: "true"
+      - uses: actions/upload-artifact@v1
+        with:
+          name: todos
+          path: todos.csv
