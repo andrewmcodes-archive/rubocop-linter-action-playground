@@ -18,7 +18,7 @@ jobs:
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Bundler Audit 1'
+      - name: 'Bundler Audit 2'
         uses: andrewmcodes/bundler-audit-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
