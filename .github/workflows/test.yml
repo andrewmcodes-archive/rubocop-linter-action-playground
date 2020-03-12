@@ -1,8 +1,6 @@
 name: Test
-on:
-  push:
-    branches:
-      - '*'
+on: [push]
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -14,7 +12,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Inputs: Version'
+      - name: 'Inputs - Version'
         uses: andrewmcodes/rubocop-linter-action@d28b32536ff45c09f2797367a049be937e577220
         with:
           action_config_path: '.github/config/rubocop_linter_config.yml'
