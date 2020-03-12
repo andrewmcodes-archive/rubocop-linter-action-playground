@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: 'tickgit-21'
+      - name: 'tickgit-22'
         uses: andrewmcodes/tickgit-action@build
         with:
           version: latest
