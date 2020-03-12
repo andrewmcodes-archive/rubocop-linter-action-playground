@@ -9,14 +9,14 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: 'tickgit'
-        uses: andrewmcodes/tickgit-action@master
+      - name: 'Inputs: None'
+        uses: andrewmcodes/rubocop-linter-action@changemepls
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: 'Inputs: Version'
-      #   uses: andrewmcodes/rubocop-linter-action@changemepls
-      #   with:
-      #     action_config_path: '.github/config/rubocop_linter_config.yml'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Inputs: Version'
+        uses: andrewmcodes/rubocop-linter-action@changemepls
+        with:
+          action_config_path: '.github/config/rubocop_linter_config.yml'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
