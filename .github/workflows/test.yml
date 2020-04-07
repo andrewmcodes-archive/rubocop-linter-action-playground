@@ -1,5 +1,5 @@
 name: Test
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
@@ -8,12 +8,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: 'Inputs: None'
-        uses: andrewmcodes/rubocop-linter-action@c45a585bc43dc5b8e1419eb3e2099017abe8483f
+        uses: andrewmcodes/rubocop-linter-action@1d763f36ab7dbec8cfec14eb769a24230f644b05
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Inputs: Version'
-        uses: andrewmcodes/rubocop-linter-action@c45a585bc43dc5b8e1419eb3e2099017abe8483f
+        uses: andrewmcodes/rubocop-linter-action@1d763f36ab7dbec8cfec14eb769a24230f644b05
         with:
           action_config_path: '.github/config/rubocop_linter_config.yml'
         env:
